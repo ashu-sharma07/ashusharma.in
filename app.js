@@ -9,5 +9,8 @@ app.get("/", (req, res)=>{
     res.sendFile(__dirname+"/index.html");
 });
 
-
-app.listen(3000);
+const domain = "127.0.0.1"
+const port = 3000;
+app.listen(port,domain,()=>{
+    console.log(`Application running on ${domain}:${port}`)
+});
